@@ -1,7 +1,7 @@
-const { validateContactsBody } = require("./validateContactsBody");
-const handleMongooseError = require("./handleMongooseError");
+const { validateBody } = require("./validateBody");
+const authenticate = require("./authenticate");
 
 module.exports = {
-   validateContactsBody,
-   handleMongooseError,
+   validateBody,
+   authenticate,
 };

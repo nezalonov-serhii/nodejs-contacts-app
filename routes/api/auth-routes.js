@@ -13,6 +13,13 @@ router.post(
    authController.signup
 );
 
+router.get("/verify/:verificationToken", authController.verify);
+router.post(
+   "/verify",
+   validateBody(schemasUser.userEmailSchema),
+   authController.resendVerify
+);
+
 router.post(
    "/login",
    validateBody(schemasUser.userLoginSchema),
